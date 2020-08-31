@@ -10,7 +10,7 @@ class test_gapassessmentpart1(unittest.TestCase):
         self.assertEqual(gapassessmentpart1.largestwordandreverse(testcontent)[0],"abcde")
         self.assertEqual(gapassessmentpart1.largestwordandreverse(testcontent)[1],"edcba")
 
-    # Test will assert correct results when the largest word is in the first position.
+    # Test will assert correct results when the largest word is in the last position.
     def test_largesttrailing(self):
         testcontent = ['a', 'abcd', 'abc', 'ab', 'abcde']
         self.assertEqual(gapassessmentpart1.largestwordandreverse(testcontent)[0],"abcde")
@@ -47,7 +47,7 @@ class test_gapassessmentpart1(unittest.TestCase):
         self.assertEqual(gapassessmentpart1.largestwordandreverse(testcontent)[1],"Largest word reversed was not obtained since file is empty.")
 
     # Test will assert correct results when the words contain lower, upper and special characters.
-    def test_(self):
+    def test_caseandspecialchars(self):
         testcontent = ['$A&b?C@d;E}', '$A&', '$A&b?C@', '$A&b?', '$A&b?C@d;']
         self.assertEqual(gapassessmentpart1.largestwordandreverse(testcontent)[0], "$A&b?C@d;E}")
         self.assertEqual(gapassessmentpart1.largestwordandreverse(testcontent)[1], "}E;d@C?b&A$")
